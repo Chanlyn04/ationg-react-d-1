@@ -1,0 +1,415 @@
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, #2B9326, #F4D8D8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navbar Collapse on Smaller Screens */
+.navbar-collapse {
+  justify-content: center;
+}
+
+/* Ensure the navbar items are properly aligned */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem; /* Increased gap */
+  text-align: center;
+}
+
+.navbar-brand {
+  font-size: 2rem; /* Larger font size */
+  font-weight: bold;
+  color: white !important;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem; /* Larger font size for links */
+  color: white !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd700 !important;
+}
+
+/* Resources Dropdown */
+.navbar .navbar-nav .nav-item.dropdown {
+  position: relative; /* For positioning dropdown menu */
+}
+
+.navbar .navbar-nav .nav-item .dropdown-toggle {
+  font-size: 1.2rem; /* Slightly larger font for dropdown toggle */
+  color: white !important; /* Default color */
+  padding: 0.75rem 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .navbar-nav .nav-item .dropdown-toggle:hover {
+  color: #ffd700 !important; /* Change color on hover */
+}
+
+/* Dropdown Menu */
+.navbar .navbar-nav .nav-item .dropdown-menu {
+  background-color: #fafbfce2; /* Light blue background */
+  border: none;
+  border-radius: 0.25rem; /* Rounded corners */
+  min-width: 180px; /* Ensure dropdown is wide enough */
+  padding: 0; /* Remove default padding */
+  display: none; /* Initially hidden */
+  position: absolute; /* Position it below the toggle */
+  top: 100%; /* Align it to the bottom of the toggle */
+  left: 0;
+  z-index: 1000; /* Ensure dropdown stays above other content */
+}
+
+/* Show the dropdown menu on hover */
+.navbar .navbar-nav .nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown Item */
+.navbar .navbar-nav .nav-item .dropdown-item {
+  color: rgb(28, 26, 26); /* Text color */
+  padding: 0.75rem 1rem; /* Add padding around items */
+  font-size: 1rem; /* Regular font size */
+  transition: background-color 0.3s ease;
+}
+
+/* Dropdown Item hover effect */
+.navbar .navbar-nav .nav-item .dropdown-item:hover {
+  background-color: #2B9326; /* Change background on hover */
+}
+
+/* Dropdown Divider */
+.navbar .navbar-nav .nav-item .dropdown-divider {
+  border-top: 1px solid #ddd;
+  margin: 0.5rem 0;
+}
+
+.dropdown-menu {
+  background-color: #d4d6dd;
+  border: none;
+}
+
+.dropdown-menu .dropdown-item {
+  color: white;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #a777e3;
+}
+
+.btn-outline-success {
+  font-size: 1.2rem; /* Larger button text */
+  color: white;
+  border-color: white;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-outline-success:hover {
+  background-color: white;
+  color: #6e8efb;
+}
+
+/* Jumbotron */
+.jumbotron {
+  background: linear-gradient(135deg, #facb5d, #d751e8);
+  color: white;
+  padding: 4rem 3rem; /* Increased padding */
+  text-align: center;
+  font-size: 40px; /* Larger font size */
+  font-weight: bolder;
+}
+
+/* Center the content */
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: calc(100vh - 250px); /* Make sure the content takes full viewport height */
+  padding: 30px; /* Increased padding */
+}
+
+/* Make the h1 big and bold */
+.placeholder-content h1 {
+  font-size: 4rem; /* Even bigger size for the title */
+  font-weight: bold;
+  margin-bottom: 25px; /* Increased space below the title */
+}
+
+/* Optional: Make sure the image is responsive */
+.placeholder-content img {
+  width: 200px; /* Increased logo size */
+  height: auto;
+  margin-bottom: 25px;
+}
+
+/* Optional: Adjust the paragraph styling */
+.placeholder-content p {
+  font-size: 1.2rem; /* Larger paragraph font */
+  max-width: 900px; /* Increased max width */
+  margin: 0 auto;
+}
+
+/* Responsive Cards */
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .jumbotron {
+    padding: 3rem 1rem; /* Adjusted padding for mobile */
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .placeholder-content {
+    height: auto; /* Adjust height for smaller content */
+    padding: 15px; /* Adjusted padding */
+  }
+
+  /* Ensure search form is properly aligned in mobile view */
+  .navbar form {
+    margin-top: 15px; /* Adjusted margin */
+  }
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: #2c3e50 !important; /* Dark navy blue */
+  padding: 15px 30px;
+}
+
+.navbar img {
+  border-radius: 50%;
+}
+
+.navbar .fw-bold {
+  font-size: 20px;
+}
+
+.navbar .btn {
+  margin-left: 10px;
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+.navbar .btn-outline-success {
+  border-color: #3ca04b;
+  color: #3ca04b;
+}
+
+.navbar .btn-outline-success:hover {
+  background-color: #3ca04b;
+  color: white;
+}
+
+/* Move buttons to the right */
+.navbar .d-flex {
+  margin-left: auto; /* Push buttons to the right */
+}
+
+/* Style the buttons */
+.navbar .btn {
+  margin-left: 10px;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.navbar .btn-outline-success {
+  border-color: #3ca04b;
+  color: #3ca04b;
+}
+
+.navbar .btn-outline-success:hover {
+  background-color: #3ca04b;
+  color: white;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #2c3e50, #3ca04b);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left text section */
+.hero h1 {
+  font-size: 4.5rem;
+  line-height: 1.2;
+}
+
+/* Join now button */
+.hero .btn-outline-success {
+  font-size: 22px;
+  padding: 14px 35px;
+  border-radius: 30px;
+}
+
+/* ===== CIRCLE BACKGROUND & BROKEN BORDER ===== */
+.circle-container {
+  position: absolute;
+  top: 600px;
+  left: 860px;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Outer Dashed Circle (Broken Border) */
+.circle-border {
+  width: 1150px;  /* Larger than background circle */
+  height: 1150px;
+  border-radius: 50%;
+  border: 10px dashed rgba(255, 255, 255, 0.5); /* Dashed broken border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 280px;
+  top: 5px;
+}
+
+/* Space Between Dashed Border & Background */
+.circle-spacing {
+  width: 1150px; /* Slightly smaller than .circle-border */
+  height: 1150px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  
+}
+
+/* Inner Background Circle */
+.circle-bg {
+  width: 1100px;
+  height: 1100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  left: 307px;
+  top: 30px;
+}
+
+/* 🚀 HERO IMAGE - A LOT BIGGER BUT BALANCED */
+.hero-img {
+  width: 2500px;
+  max-width: 1609px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  top: 200px;
+  right: 60px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+  .hero h1 {
+      font-size: 4rem;
+  }
+
+  .hero-img {
+      width: 95%;
+      max-width: 650px;
+      margin-right: 10%;
+  }
+
+  .circle-border {
+      width: 450px;
+      height: 450px;
+      border-width: 6px;
+  }
+
+  .circle-spacing {
+      width: 430px;
+      height: 430px;
+  }
+
+  .circle-bg {
+      width: 400px;
+      height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+      text-align: center;
+      flex-direction: column;
+      padding: 40px 20px;
+  }
+
+  .hero h1 {
+      font-size: 3.5rem;
+  }
+
+  .hero-img {
+      width: 100%;
+      max-width: 600px;
+      margin-right: 20%;
+  }
+
+  .circle-border {
+      width: 380px;
+      height: 380px;
+      border-width: 5px;
+  }
+
+  .circle-spacing {
+      width: 360px;
+      height: 360px;
+  }
+
+  .circle-bg {
+      width: 350px;
+      height: 350px;
+  }
+}
+/* ===== LEFT TEXT SECTION ===== */
+.Caption {
+  font-size: 3.5rem; /* Large text for impact */
+  font-weight: bold;
+  line-height: 1.2;
+  color: black; /* Ensuring contrast with the white background */
+  text-align: left;
+  right: 100px; /* Only 5px margin to the left */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .Caption {
+    font-size: 3rem; /* Slightly smaller for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .Caption {
+    font-size: 2.5rem; /* Adjust text size for mobile */
+  }
+}

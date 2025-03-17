@@ -669,7 +669,7 @@ body {
 .sign-in-btn {
   width: 100%;
   padding: 10px;
-  background-color: #3c923c;
+  background-color:  #267347;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -751,7 +751,7 @@ body {
 .footer-center{
   text-align: center;
   font-size: large;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 
@@ -806,7 +806,7 @@ Sign UP Design */
 /* Signup card styling */
 .signup-card {
   width: 380px;
-  background: white;
+  background:  #F0E8E8;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -890,7 +890,7 @@ label {
   color: white;
   background: #2e8b57;
   border: none;
-  border-radius: 25px;
+  border-radius: 15px;
   cursor: pointer;
   margin-top: 15px;
 }

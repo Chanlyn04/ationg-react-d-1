@@ -60,7 +60,7 @@ const SignIn = () => {
         </div>
 
             <a href="#" className="forgot-password">Forgot Password?</a>
-            <button className="sign-in-btn" onClick={() => navigate("/Home")}>
+            <button className="sign-in-btn" onClick={() => navigate("/Profile")}>
       Sign in
     </button>
           </form>

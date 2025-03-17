@@ -5,10 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
-
 import Home from "./components/Home";
-// import Profile from "./components/Profile";
+import Profile from "./components/Profile";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/Signup";
 
@@ -24,7 +22,7 @@ function App() {
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Home" element={<Home />} />
-        
+        <Route path="/Profile" element={<Profile />} />
         <Route path="/Navbar" element={<Navbar />} />
         <Route path="/Footer" element={<Footer />} />
         

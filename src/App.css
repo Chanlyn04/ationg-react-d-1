@@ -33,6 +33,7 @@
   font-size: 1.2rem; /* Larger font size for links */
   color: white !important;
   transition: color 0.3s ease-in-out;
+  
 }
 
 .navbar-nav .nav-link:hover {
@@ -412,4 +413,503 @@
   .Caption {
     font-size: 2.5rem; /* Adjust text size for mobile */
   }
+}
+
+/* Sign In CSS */
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../../public/images/b.png') no-repeat center center ;
+  background-size: 1090px 610px; /* Width 1200px, height adjusts automatically */
+
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%; /* Ensure it takes full width */
+   /* Ensure same background as body */
+  justify-content: space-between; /* Ensures left and right sections are spaced */
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  
+}
+
+
+/* Logo in navbar */
+.logo-containers {
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Aligns logo and text in the center vertically */
+  gap: 10px; /* Adds spacing between logo and text */
+  
+}
+
+/* Logo */
+.logo-containers img {
+  width: 70px;
+  height: 70px;
+  
+  display: block;
+
+}
+
+/* Logo text */
+.logo-texts {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+/* Navbar */
+/* Navbar */
+.navbar {
+  position: fixed;
+  background: linear-gradient(to right, #28a745, white);
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Ensures spacing between logo and buttons */
+  align-items: center; /* Centers all navbar items vertically */
+  padding: 10px 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  height: 80px; /* Ensure enough height */
+}
+
+/* Logo Container */
+.logo-containers {
+  display: flex;
+  align-items: center; /* Centers logo and text vertically */
+  gap: 10px; /* Adds spacing between logo and text */
+  height: 100%; /* Ensures it takes full navbar height */
+}
+
+/* Logo */
+.logo-containers img {
+  width: 70px;
+  height: 70px;
+  display: block;
+  object-fit: contain; /* Keeps aspect ratio */
+}
+
+/* Logo Text */
+.logo-texts {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  line-height: 1; /* Helps in vertical alignment */
+}
+.navbar-right {
+  display: flex;
+  gap: 15px;
+  
+
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  background-color: white;
+  margin-left: 20px;
+  border-radius: 10px;
+  text-align: center;
+  height: 50px;
+  margin-bottom: 5px;
+
+}
+.nav-link:hover {
+  background-color: #f0f0f0; /* Slightly darker white */
+}
+
+.nav-link.sign-up {
+  color: white;
+  background-color: #28a745;
+  border-radius: 10px;
+  height: 50px;
+  
+}
+.nav-link.sign-up:hover {
+  background-color: #218838; /* Darker green */
+}
+
+/* Main Container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding: 20px;
+  background: none;
+  
+}
+
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+
+/* Login Form Wrapper */
+.Login-form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Push content to the left */
+  padding-left: 5%;
+  margin-top: 30px;
+  background-color: transparent;
+  margin-bottom: 5px;
+  
+}
+
+/* Login Card */
+.login-card {
+  width: 400px; /* Adjust width as needed */
+  background-color: #F0E8E8;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* Logo */
+.logo-container {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  margin-bottom: 20px;
+  width: 100%; /* Ensures it takes full width */
+}
+
+.form-logo {
+  width: 100px;
+  height: auto; /* Ensures it keeps aspect ratio */
+
+}
+
+
+/* Headings */
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+/* Password Input */
+.password-container {
+  position: relative;
+}
+
+.eye-icon {
+   margin-top: 7px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  
+
+}
+
+/* Forgot Password */
+.forgot-password {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  color: #480606;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Sign-in Button */
+.sign-in-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #3c923c;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.sign-in-btn:hover {
+  background-color: #2e6d2e;
+}
+
+/* Signup Link */
+.signup-text {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.signup-link {
+  color: #259122;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Right Section (for future use) */
+.right-section {
+  display: flex;
+  justify-content: flex-end; /* Moves content to the right */
+  align-items: center;
+  flex: 1; /* Allows it to take up space */
+  height: 100vh; /* Full height */
+  padding-right: 50px; /* Adds spacing from the right edge */
+}
+
+
+.image-container img {
+  width: 100%; /* Ensures full container coverage */
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .Login-form {
+      justify-content: center;
+      padding: 0;
+  }
+
+  .login-card {
+      width: 90%;
+  }
+}
+
+  /* Footer Design */
+  .footer {
+  width: 100%;
+  background:#2E7D32;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 14px;
+  position: absolute;
+  margin-top: 43%; 
+  height: 10%;
+  }
+
+
+.footer-center{
+  text-align: center;
+  font-size: large;
+  margin-right: 50px;
+}
+
+
+.footer-left , .footer-right{
+  margin-top: 40px;
+  opacity: 0.7; /* Reduces the text opacity to 70% */
+  transition: opacity 0.3s ease;
+}
+
+
+.footer a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, text-decoration-thickness 0.3s ease;
+}
+
+/* Hover effect: Underline and slightly darker color */
+.footer a:hover {
+  text-decoration: underline;
+  color: #e3e0cf;
+}
+
+/* Click effect: Underline stays after click */
+.footer a:active {
+  text-decoration: underline;
+  
+}
+
+.footer span {
+  margin: 0 5px;
+  color: white;
+}
+/*   
+Sign UP Design */
+
+/* Center the form */
+/* Ensure the container is positioned to the left */
+.signup-container {
+  
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Push content to the left */
+  padding-left: 5%;
+  margin-top: 30px;
+  background-color: transparent;
+  margin-bottom: 5px;
+}
+
+/* Signup card styling */
+.signup-card {
+  width: 380px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+.Signup-text {
+  font-size: 16px;  
+  font-weight: bold;  
+  color: #393030;  
+  margin: 0;  /* Remove extra margin */
+  margin-right: 200px;
+}
+
+
+
+
+/* Logo */
+.logo-containers {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.small-logo {
+  width: 10px;
+  height: auto;
+}
+
+/* Title */
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Form fields */
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input styling */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  background: #e8e8e8;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Input with icon wrapper */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Register button */
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #2e8b57;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.register-btn:hover {
+  background: #267347;
+}
+
+/* Sign-in link */
+.signin-text {
+  margin-top: 15px;
+}
+
+.signin-link {
+  color: #2e8b57;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signin-link:hover {
+  text-decoration: underline;
 }

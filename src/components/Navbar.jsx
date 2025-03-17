@@ -23,7 +23,6 @@
 
 // export default NavigationBar;
 
-import React from "react";
 import { useNavigate } from "react-router-dom";
 function NavigationBar() {
     const navigate = useNavigate();

@@ -59,7 +59,7 @@ const SignIn = () => {
           </span>
         </div>
 
-            <a href="#" className="forgot-password">Forgot Password?</a>
+            <a href="/ForgotPassword" className="forgot-password">Forgot Password?</a>
             <button className="sign-in-btn" onClick={() => navigate("/Profile")}>
       Sign in
     </button>

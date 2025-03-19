@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/Signup";
+import ForgotPassword from "./components/ForgotPassword";
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<SignIn />} />
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Navbar" element={<Navbar />} />

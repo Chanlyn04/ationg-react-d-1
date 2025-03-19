@@ -3,11 +3,13 @@ import { Image } from 'react-bootstrap';
 import logo from '../assets/Images/logo.png';
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+   const navigate = useNavigate();
   return (
     
     <div className="container">
@@ -37,7 +39,7 @@ const SignUp = () => {
           <img src={logo} alt="Logo" className="small-logo" />
         </div>
         
-        <h2 className="title">Create an account</h2>
+        <h2 className="titles">Create an account</h2>
 
         <form>
           {/* Email Field */}
@@ -73,7 +75,8 @@ const SignUp = () => {
           </div>
 
           {/* Register Button */}
-          <button className="register-btn">Register</button>
+          
+          <button className="register-btn" onClick={() => navigate("/SignIn")}>Register</button>
         </form>
 
           <p className="signup-text">

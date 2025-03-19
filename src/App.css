@@ -418,15 +418,6 @@
 /* Sign In CSS */
 
 /* General Styles */
-body {
-  margin: 0;
-  padding: 0;
-  background: url('../../public/images/b.png') no-repeat center center ;
-  background-size: 1090px 610px; /* Width 1200px, height adjusts automatically */
-
-}
-
-
 .container {
   display: flex;
   flex-direction: column;
@@ -437,34 +428,15 @@ body {
   justify-content: space-between; /* Ensures left and right sections are spaced */
   height: 100vh; /* Full viewport height */
   padding: 20px;
+  background: url('../../public/images/b.png') no-repeat center center ;
+  background-size: 1090px 610px; /* Width 1200px, height adjusts automatically */
+
   
 }
 
 
-/* Logo in navbar */
-.logo-containers {
-  display: flex; /* Enables flexbox */
-  align-items: center; /* Aligns logo and text in the center vertically */
-  gap: 10px; /* Adds spacing between logo and text */
-  
-}
 
-/* Logo */
-.logo-containers img {
-  width: 70px;
-  height: 70px;
-  
-  display: block;
 
-}
-
-/* Logo text */
-.logo-texts {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-}
-/* Navbar */
 /* Navbar */
 .navbar {
   position: fixed;
@@ -578,7 +550,7 @@ body {
   width: 400px; /* Adjust width as needed */
   background-color: #F0E8E8;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -805,10 +777,10 @@ Sign UP Design */
 
 /* Signup card styling */
 .signup-card {
-  width: 380px;
+  width: 400px;
   background:  #F0E8E8;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
@@ -820,9 +792,8 @@ Sign UP Design */
   color: #393030;  
   margin: 0;  /* Remove extra margin */
   margin-right: 200px;
+  margin-bottom: 25px;
 }
-
-
 
 
 /* Logo */
@@ -834,12 +805,14 @@ Sign UP Design */
 .small-logo {
   width: 10px;
   height: auto;
+  margin-bottom: 25px;
 }
 
 /* Title */
-.title {
+.titles {
   font-size: 22px;
   font-weight: bold;
+  margin-bottom: 15px;
   margin-bottom: 15px;
 }
 

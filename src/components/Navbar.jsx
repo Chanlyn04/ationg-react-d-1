@@ -22,7 +22,6 @@
 // }
 
 // export default NavigationBar;
-
 import { useNavigate } from "react-router-dom";
 function NavigationBar() {
     const navigate = useNavigate();
@@ -52,13 +51,15 @@ function NavigationBar() {
                                     <li><hr className="dropdown-divider" /></li>
                                     <li><a className="dropdown-item" href="#">Exercise</a></li>
                                     <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="#">Seek Advice</a></li>
+                                    <li><a className="dropdown-item" href="#">Self-care Tips</a></li>
                                 </ul>
                             </li>
                         </ul>
                         <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
+                       
+                        <button className="btn btn-outline-success" type="submit">Login</button>
+                        <button className="btn btn-success" type="submit">Register</button>
+                        
                         </form>
                     </div>
                 </div>

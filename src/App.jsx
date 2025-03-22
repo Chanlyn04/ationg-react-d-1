@@ -5,11 +5,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Profile from "./components/Profile";
-import SignIn from "./components/SignIn";
-import SignUp from "./components/Signup";
-import ForgotPassword from "./components/ForgotPassword";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import SignIn from "./pages/Signin";
+import SignUp from "./pages/Signup";
+import ForgotPassword from "./pages/ForgotPassword";
+import Landing from "./pages/Landing";
 
 
 
@@ -17,20 +18,16 @@ import ForgotPassword from "./components/ForgotPassword";
 function App() {
   return (
     <Router>
-      
+      <Navbar />
       <Routes>
-        <Route path="/" element={<SignIn />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/Navbar" element={<Navbar />} />
-        <Route path="/Footer" element={<Footer />} />
-        
-
-  
+        <Route path="/SignIn" element={<Home />} />
+        <Route path="/Profile " element={<Profile />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

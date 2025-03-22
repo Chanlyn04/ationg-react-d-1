@@ -1,5 +1,4 @@
-import Button from 'react-bootstrap/Button';
-import { Image } from 'react-bootstrap';
+
 import logo from '../assets/Images/logo.png';
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -13,23 +12,7 @@ const SignUp = () => {
   return (
     
     <div className="container">
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="logo-containers" > 
-        <Image 
-        src={logo}
-        alt="Logo" 
-          />
-       <div>
-       <span className="logo-texts">Thrive360</span>
-    </div>
       
-        </div>
-        <div className="navbar-right">
-          <Button variant="outline-light" className="nav-link">Sign In</Button>
-          <Button variant="primary" className="nav-link sign-up">Sign Up</Button>
-        </div>
-      </nav>
 
       <div className="signup-container">
       <div className="signup-card">
@@ -82,30 +65,21 @@ const SignUp = () => {
           <p className="signup-text">
            {" Already have an account?"} <a href="/SignIn" className="signup-link">Sign in</a>
           </p>
+          </div>
+          
+          <div className="text-centers">
+          <div className="circle-borders"></div>
+          <div className="circle-backg"></div>
+          <img
+            src="https://www.groupiso.com/wp-content/uploads/2023/02/woman-laughing-on-phone.png"
+            className="img-hero"
+          />
         </div>
-
+         
         </div>
           
 
   
-  {/* Footer */}
-  <footer className="footer">
-  <div className="footer-left">
-       <span>© 2025 Thrive360. All rights reserved.</span>
-      </div>
-
-      <div className="footer-center">
-      <a href="#terms">Terms and Conditions</a>
-      <span>•</span>
-      <a href="#privacy">Privacy Policy</a>
-      <span>•</span>
-      <a href="#services">Terms of Service</a>
-      </div>
-      <div className="footer-right">
-      <span>Develop by: Ationg,Ferlita & Sanchez, Chanlyn</span>
-      
-      </div>
-  </footer>
   </div>
   
   

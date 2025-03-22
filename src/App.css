@@ -1,13 +1,16 @@
 /* Navbar */
 .navbar {
-  background: linear-gradient(135deg, #2B9326, #F4D8D8);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
+  position: fixed;
+  background: linear-gradient(to right, #28a745, white);
   width: 100%;
+  display: flex;
+  justify-content: space-between; /* Ensures spacing between logo and buttons */
+  align-items: center; /* Centers all navbar items vertically */
+  padding: 10px 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  height: 80px; /* Ensure enough height */
 }
-
 /* Navbar Collapse on Smaller Screens */
 .navbar-collapse {
   justify-content: center;
@@ -24,41 +27,44 @@
 }
 
 .navbar-brand {
-  font-size: 2rem; /* Larger font size */
+  font-size: 1.5rem; /* Larger font size */
   font-weight: bold;
-  color: white !important;
+  
 }
 
 .navbar-nav .nav-link {
-  font-size: 1.2rem; /* Larger font size for links */
-  color: white !important;
+  font-size: 1.5rem; /* Larger font size for links */
+  background-color: transparent !important; /* Removes white background */
   transition: color 0.3s ease-in-out;
+  color: black !important; /* Ensures text is visible */
   
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ffd700 !important;
+  background-color: rgba(255, 255, 255, 0.2); /* Optional: Adds a slight hover effect */
+  color: black;
+  text-decoration: underline;
+  transition: width 0.5s ease-in-out, left 0.3s ease-in-out; 
 }
+
 
 /* Resources Dropdown */
 .navbar .navbar-nav .nav-item.dropdown {
   position: relative; /* For positioning dropdown menu */
 }
 
-.navbar .navbar-nav .nav-item .dropdown-toggle {
-  font-size: 1.2rem; /* Slightly larger font for dropdown toggle */
-  color: white !important; /* Default color */
-  padding: 0.75rem 1rem;
-  transition: color 0.3s ease-in-out;
-}
 
-.navbar .navbar-nav .nav-item .dropdown-toggle:hover {
-  color: #ffd700 !important; /* Change color on hover */
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly stronger hover effect */
+  color: white !important;
+  border-radius: 8px; /* Adds smooth rounded corners */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  
 }
 
 /* Dropdown Menu */
 .navbar .navbar-nav .nav-item .dropdown-menu {
-  background-color: #fafbfce2; /* Light blue background */
   border: none;
   border-radius: 0.25rem; /* Rounded corners */
   min-width: 180px; /* Ensure dropdown is wide enough */
@@ -90,18 +96,10 @@
 
 /* Dropdown Divider */
 .navbar .navbar-nav .nav-item .dropdown-divider {
-  border-top: 1px solid #ddd;
+
   margin: 0.5rem 0;
 }
 
-.dropdown-menu {
-  background-color: #d4d6dd;
-  border: none;
-}
-
-.dropdown-menu .dropdown-item {
-  color: white;
-}
 
 .dropdown-menu .dropdown-item:hover {
   background-color: #a777e3;
@@ -115,7 +113,6 @@
 }
 
 .btn-outline-success:hover {
-  background-color: white;
   color: #6e8efb;
 }
 
@@ -236,15 +233,7 @@
   border-radius: 10px;
 }
 
-.navbar .btn-outline-success {
-  border-color: #3ca04b;
-  color: #3ca04b;
-}
 
-.navbar .btn-outline-success:hover {
-  background-color: #3ca04b;
-  color: white;
-}
 
 /* ===== HERO SECTION ===== */
 .hero {
@@ -286,21 +275,21 @@
 
 /* Outer Dashed Circle (Broken Border) */
 .circle-border {
-  width: 1150px;  /* Larger than background circle */
-  height: 1150px;
+  width: 750px;  /* Larger than background circle */
+  height: 750px;
   border-radius: 50%;
   border: 10px dashed rgba(255, 255, 255, 0.5); /* Dashed broken border */
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 280px;
-  top: 5px;
+  left: 45px;
+  top: 130px;
 }
 
 /* Space Between Dashed Border & Background */
 .circle-spacing {
-  width: 1150px; /* Slightly smaller than .circle-border */
+  width: 1050px; /* Slightly smaller than .circle-border */
   height: 1150px;
   border-radius: 50%;
   background-color: transparent;
@@ -310,28 +299,28 @@
 
 /* Inner Background Circle */
 .circle-bg {
-  width: 1100px;
-  height: 1100px;
+  width: 700px;
+  height: 700px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   position: absolute;
-  left: 307px;
-  top: 30px;
+  left: 70px;
+  top: 150px;
 }
 
 /* 🚀 HERO IMAGE - A LOT BIGGER BUT BALANCED */
 .hero-img {
-  width: 2500px;
+  width: 1100px;
   max-width: 1609px;
   height: auto;
   position: relative;
   z-index: 1;
-  top: 200px;
-  right: 60px;
+  top: 150px;
+  right: 200px;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   .hero h1 {
       font-size: 4rem;
   }
@@ -399,7 +388,7 @@
   line-height: 1.2;
   color: black; /* Ensuring contrast with the white background */
   text-align: left;
-  right: 100px; /* Only 5px margin to the left */
+  
 }
 
 /* Responsive Adjustments */
@@ -418,81 +407,40 @@
 /* Sign In CSS */
 
 /* General Styles */
-.container {
-  display: flex;
-  flex-direction: column;
+/* Container Styling */
+.container {   
+  background: linear-gradient(to right,#2c3e50, #3ca04b);
+
+  overflow: hidden; /* Prevents extra white space */
+  justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  width: 100%; /* Ensure it takes full width */
-   /* Ensure same background as body */
-  justify-content: space-between; /* Ensures left and right sections are spaced */
-  height: 100vh; /* Full viewport height */
-  padding: 20px;
-  background: url('../../public/images/b.png') no-repeat center center ;
-  background-size: 1090px 610px; /* Width 1200px, height adjusts automatically */
-
-  
+  display: flex;
+  min-width: 100%;
 }
-
-
 
 
 /* Navbar */
-.navbar {
-  position: fixed;
-  background: linear-gradient(to right, #28a745, white);
-  width: 100%;
-  display: flex;
-  justify-content: space-between; /* Ensures spacing between logo and buttons */
-  align-items: center; /* Centers all navbar items vertically */
-  padding: 10px 30px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  height: 80px; /* Ensure enough height */
-}
-
-/* Logo Container */
-.logo-containers {
-  display: flex;
-  align-items: center; /* Centers logo and text vertically */
-  gap: 10px; /* Adds spacing between logo and text */
-  height: 100%; /* Ensures it takes full navbar height */
-}
-
-/* Logo */
-.logo-containers img {
-  width: 70px;
-  height: 70px;
-  display: block;
-  object-fit: contain; /* Keeps aspect ratio */
-}
-
-/* Logo Text */
-.logo-texts {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  line-height: 1; /* Helps in vertical alignment */
-}
 .navbar-right {
   display: flex;
+  align-items: center;
   gap: 15px;
-  
-
 }
 
+/* Navbar Links */
 .nav-link {
   text-decoration: none;
   color: #333;
   font-weight: 600;
   background-color: white;
-  margin-left: 20px;
+  padding: 10px 20px;
   border-radius: 10px;
   text-align: center;
-  height: 50px;
-  margin-bottom: 5px;
-
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .nav-link:hover {
   background-color: #f0f0f0; /* Slightly darker white */
 }
@@ -500,98 +448,76 @@
 .nav-link.sign-up {
   color: white;
   background-color: #28a745;
-  border-radius: 10px;
-  height: 50px;
-  
 }
+
 .nav-link.sign-up:hover {
   background-color: #218838; /* Darker green */
 }
 
-/* Main Container */
+/* Login Page Layout */
 .login-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  padding: 20px;
-  background: none;
-  
-}
-
-
-.logo-text {
-  font-size: 20px;
-  font-weight: bold;
-  
-}
-
-
-/* Login Form Wrapper */
-.Login-form {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  margin-top: 100px;
+}
+
+/* Login Form & Hero Image Wrapper */
+.Login-form {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start; /* Push content to the left */
-  padding-left: 5%;
-  margin-top: 30px;
-  background-color: transparent;
-  margin-bottom: 5px;
-  
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 50px;
+  padding-left: 100px; /* Moves everything slightly to the right */
+ 
 }
 
 /* Login Card */
 .login-card {
-  width: 400px; /* Adjust width as needed */
   background-color: #F0E8E8;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-
+  margin-left: 50px; /* Adjust this value to move it more or less */
 }
 
 /* Logo */
 .logo-container {
-  display: flex; /* Enables flexbox */
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  margin-bottom: 20px;
-  width: 100%; /* Ensures it takes full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px
+  
+}
+/* Centering the text inside the form */
+.title, .subtitle {
+  text-align: center; /* Center the text */
+  width: 100%; /* Ensure it takes the full width */
+  margin-bottom: 10px; /* Add spacing */
 }
 
-.form-logo {
-  width: 100px;
-  height: auto; /* Ensures it keeps aspect ratio */
-
-}
-
-
-/* Headings */
+/* Style for the title */
 .title {
-  text-align: center;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
-  margin-bottom: 5px;
+  color: #2c3e50;
 }
 
+/* Style for the subtitle */
 .subtitle {
-  text-align: center;
-  font-size: 16px;
-  color: #6c757d;
+  font-size: 20px;
+  color: 463C3C;
   margin-bottom: 20px;
 }
-
 /* Form */
 .form {
   display: flex;
   flex-direction: column;
+
 }
 
 .form label {
@@ -600,8 +526,9 @@
   font-weight: 500;
 }
 
+/* Input Fields */
 .input {
-  width: 100%;
+  width: 300px;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -609,19 +536,78 @@
   font-size: 14px;
 }
 
-/* Password Input */
+/* Password Field */
 .password-container {
   position: relative;
 }
 
 .eye-icon {
-   margin-top: 7px;
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-  
-
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
+
+/* Hero Image  for sign in , sign up , and forgot pass*/
+.text-centers  {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.circle-borders {
+  position: absolute;
+  width: 640px;
+  height: 640px;
+  border-radius: 50%;
+  border: 6px dashed #fff; /* Dashed white border */
+  top: 370px;
+  left: 600px;
+  transform: translate(-50%, -50%);
+}
+.circle-backg {
+  width: 600px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  left: 300px;
+  top: 70px;
+}
+
+
+.img-hero {
+  width: 1000px;
+  max-width: 1609px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  top: 100px;
+  left: 40px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .Login-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .text-center {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
 
 /* Forgot Password */
 .forgot-password {
@@ -636,6 +622,7 @@
 .forgot-password:hover {
   text-decoration: underline;
 }
+
 
 /* Sign-in Button */
 .sign-in-btn {
@@ -700,40 +687,44 @@
   }
 
   .login-card {
-      width: 90%;
+      width: 100%;
   }
 }
 
   /* Footer Design */
-  .footer {
+.footer {
   width: 100%;
-  background:#2E7D32;
+  background: #2E7D32;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 15px 30px;
   font-size: 14px;
-  position: absolute;
-  margin-top: 43%; 
-  height: 10%;
-  }
+  position: relative; /* Change from absolute */
+  bottom: 0;
+  min-height: 60px; /* Avoid using % for height */
+}
 
-
-.footer-center{
+/* Center Content */
+.footer-center {
   text-align: center;
   font-size: large;
+  flex-grow: 1; /* Helps center content */
   margin-right: 30px;
 }
 
-
-.footer-left , .footer-right{
-  margin-top: 40px;
-  opacity: 0.7; /* Reduces the text opacity to 70% */
+/* Left & Right Sections */
+.footer-left,
+.footer-right {
+  opacity: 0.7;
   transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center; /* Aligns content vertically */
+  margin-top: 30px;
 }
 
-
+/* Footer Links */
 .footer a {
   margin: 0 10px;
   text-decoration: none;
@@ -750,9 +741,9 @@
 /* Click effect: Underline stays after click */
 .footer a:active {
   text-decoration: underline;
-  
 }
 
+/* Footer Separator */
 .footer span {
   margin: 0 5px;
   color: white;
@@ -760,60 +751,66 @@
 /*   
 Sign UP Design */
 
-/* Center the form */
-/* Ensure the container is positioned to the left */
+
+/* Signup Container */
 .signup-container {
-  
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Push content to the left */
-  padding-left: 5%;
-  margin-top: 30px;
+  justify-content: center; /* Center the form */
+  margin-top: 50px;
   background-color: transparent;
-  margin-bottom: 5px;
 }
 
-/* Signup card styling */
+/* Signup Card */
 .signup-card {
-  width: 400px;
-  background:  #F0E8E8;
-  padding: 20px;
-  border-radius: 12px;
+  width: 590px; /* Match the login card width */
+  background: #F0E8E8;
+  padding: 30px; /* Match login padding */
+  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin-left: 150px;
+  
 }
+
 
 
 .Signup-text {
-  font-size: 16px;  
+  font-size: 15px;  
   font-weight: bold;  
   color: #393030;  
   margin: 0;  /* Remove extra margin */
-  margin-right: 200px;
-  margin-bottom: 25px;
+  display: inline-block; /* Prevents line break */
+  margin-bottom: 15px;
+  white-space: nowrap; /* Ensures text stays on one line */;
 }
 
 
 /* Logo */
 .logo-containers {
   display: flex;
-  justify-content: flex-end;
+ 
+  
 }
 
 .small-logo {
-  width: 10px;
+  width: 50px;
   height: auto;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  margin-left: 190px;
+  
+  
+  
 }
 
 /* Title */
 .titles {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: bold;
-  margin-bottom: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  
 }
 
 /* Form fields */
@@ -831,7 +828,7 @@ label {
 
 /* Input styling */
 .input-field {
-  width: 100%;
+  width: 300px;
   padding: 12px;
   border-radius: 15px;
   border: 1px solid #ccc;
@@ -865,7 +862,7 @@ label {
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .register-btn:hover {
@@ -886,3 +883,172 @@ label {
 .signin-link:hover {
   text-decoration: underline;
 }
+
+
+.forgot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.forgot-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* Forgot Password Card */
+.forgot-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  height: 500px;
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+}
+
+/* Back Arrow */
+.back-arrow {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.form-logo {
+  width: 80px;
+}
+
+/* Title & Subtitle */
+.forgot-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 1px;
+}
+
+.forgot-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* Form Styling */
+.forgot-form {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+}
+
+.forgot-input {
+  width: 300px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #e8e8e8;
+  font-size: 14px;
+  outline: none;
+}
+
+.resend-in-btn {
+  width: 100%;
+  background-color: #0a7426;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.Signup-text {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.Sign-Up-link {
+  color: #0a7426;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Image Container */
+.forgot-centers {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.c-border {
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  border: 6px dashed #fff; /* Dashed white border */
+  margin-top: 400px;
+  margin-left: 610px;
+  transform: translate(-50%, -50%);
+}
+
+.c-backg {
+  width: 610px;
+  height: 610px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  left: 825px;
+  top: 125px;
+}
+
+.hero-pic {
+  width: 1000px;
+  max-width: 1609px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  top: 130px;
+  left: 45px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .forgot-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forgot-image-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .forgot-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+
+
+
+

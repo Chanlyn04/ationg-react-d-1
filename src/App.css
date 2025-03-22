@@ -798,7 +798,7 @@ Sign UP Design */
 .small-logo {
   width: 50px;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   margin-left: 190px;
   
   
@@ -809,7 +809,7 @@ Sign UP Design */
 .titles {
   font-size: 25px;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   
 }
 
@@ -862,7 +862,7 @@ label {
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 .register-btn:hover {

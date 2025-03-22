@@ -478,7 +478,7 @@
 
 /* Login Card */
 .login-card {
-  background-color: #F0E8E8;
+  background: white;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -544,9 +544,9 @@
 .eye-icon {
   position: absolute;
   right: 10px;
-  top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  margin-top: 20px;
 }
 
 /* Hero Image  for sign in , sign up , and forgot pass*/
@@ -766,7 +766,7 @@ Sign UP Design */
 /* Signup Card */
 .signup-card {
   width: 590px; /* Match the login card width */
-  background: #F0E8E8;
+  background: white;
   padding: 30px; /* Match login padding */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
